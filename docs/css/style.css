@@ -1,0 +1,45 @@
+body {background-color: #F8F8F8; color: #333; font: normal 1em 'Lato', Futura, "Trebuchet MS", Tahoma, Verdana, Helvetica, Arial, sans-serif; margin: 50px 50px 50px 50px; padding: 0 0 0 0;}
+img {border: 0px;}
+h1, h2, h3, h4, h5 {font-size: 120%; line-height: 1.2em; margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;}
+a:link, a:visited, a:active, a:hover {background-color: #fff; color: #0a3d2f; text-decoration: none;}
+a:hover {text-decoration: underline;}
+address {font-style: normal;}
+p {margin: 1rem 0px 1.33rem 0px; padding: 0px 0px 0px 0px;}
+/*h1.title, h1.title-active {background-color: blue; color: #0a3d2f; background-image: url(images/dead.png); font-size: 150%; text-align: center;padding: 4px 4px 4px 4px; height: 1.5em;}
+h1.title-active {background-color: blue; color: #0a3d2f; background-image: url(images/active.png);}
+*/
+
+address {
+  font-style: normal;
+}
+
+div#frame {background-color: #fff; background-image: url(images/background.gif); background-repeat: no-repeat; color: #333; text-align: left; margin: 0 auto; padding: 0px 20px 20px 20px; width: 710px; height: 410px; clear: both;}
+
+.container {
+  height: 300px;
+  width: 600px;
+  position: absolute;
+
+  margin: -300px 0 0 -300px;
+  left: 50%;
+  top: 50%;
+}
+
+.box {
+  height: 100px;
+  width: 300px;
+  position: absolute;
+
+  /*Centering Method 2*/  margin: -150px 0 0 -150px;
+  left: 50%;
+  top: 50%;
+}
+
+div#nav {padding-top: 5px;}
+div#nav ul {padding: 3px 0; margin-left: 0; border-bottom: 1px solid #778;}
+div#nav ul li {list-style: none; margin: 0; display: inline;}
+div#nav ul li a {padding: 3px 0.5em; margin-left: 3px; border: 1px solid #778; border-bottom: none; background: #DDE; text-decoration: none;}
+div#nav li#present a {background-color: #eee;}
+div#nav a {border-top: gray 1px solid; border-left: gray 1px solid; border-bottom: gray 1px solid;}
+
+div#footer {padding-top: 3em; clear: both;}
