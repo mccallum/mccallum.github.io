@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-<title></title>
+<title>2017-2018</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta name="author" content="David McCallum" />
 <meta name="description" content="" />
@@ -128,10 +128,69 @@
     }
 
   }
+
+  google.charts.load('current', {'packages':['table']});
+   google.charts.setOnLoadCallback(drawTable);
+
+   function drawTable() {
+     var data = new google.visualization.DataTable();
+     data.addColumn('string', 'Name');
+     data.addColumn('string', 'Location');
+     data.addColumn('number', 'Year');
+     data.addColumn('boolean', 'Live?');
+     data.addRows([
+       ['Time OnLine','http://timeonline.uoregon.edu/',  {v: 2018, f: '2018'}, true],
+       ['Napoleon\'s Map ','http://pages.uoregon.edu/ulmausterlitzmap',   {v:2017,   f: '2017'},  false],
+       ['Oregon Latino','https://oregondigital.org/sets/or-latino-herit', {v: 2016, f: '2016'}, true],
+       ['Corazon de Dixie','http://corazondedixie.org/',   {v: 2015,  f: '2015'},  true]
+     ]);
+
+     var table = new google.visualization.Table(document.getElementById('table_div'));
+
+     table.draw(data, {showRowNumber: false, width: '900px', height: '100%'});
+   }
+
+   function isSiteOnline(url,callback) {
+       // try to load favicon
+       var timer = setTimeout(function(){
+           // timeout after 5 seconds
+           callback(false);
+       },5000)
+
+       var img = document.createElement("img");
+       img.onload = function() {
+           clearTimeout(timer);
+           callback(true);
+       }
+
+       img.onerror = function() {
+           clearTimeout(timer);
+           callback(false);
+       }
+
+       img.src = url+"/favicon.ico";
+   }
+
+   isSiteOnline("http://corazondedixie.org/",function(found){
+       if(found) {
+           // site is online
+           alert('Site responds');
+       }
+       else {
+           // site is offline (or favicon not found, or server is too slow)
+           alert('Site doesn\'t respond');
+
+       }
+   })
+
 </script>
 
 <body style="background-color: #F8F8F8;">
-  <div id="chart_div" style="width: 100%; height: 500px;"></div>
-  <div id="piechart" style="width: 900px; height: 500px;"></div>
+  <div style="text-align:center;">
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSiD4DGUfU7mXnWWU5ZfywvEtOlSkl-g0vsHbjST_fIxr1YeLrQlL9ZhuaP_dzRZdc43ovfdmP1w8t2/pubhtml?gid=2099190768&amp;single=true&amp;widget=true&amp;headers=false&amp;range=F1:H22" width="1024px" height="600px"></iframe>
+    <!--div id="table_div"></div-->
+    <div id="chart_div" style="width: 1024px; height: 500px;"></div>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+  </div>
 </body>
 </html>
