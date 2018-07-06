@@ -150,6 +150,7 @@
      table.draw(data, {showRowNumber: false, width: '900px', height: '100%'});
    }
 
+/*
    function isSiteOnline(url,callback) {
        // try to load favicon
        var timer = setTimeout(function(){
@@ -181,7 +182,7 @@
            alert('Site doesn\'t respond');
 
        }
-   })
+   })*/
 
    $('iframe').load( function() {
        $('iframe').contents().find("head")
@@ -198,13 +199,4 @@
     <div id="piechart" style="width: 900px; height: 500px;"></div>
   </div>
 </body>
-
-<script type="text/javascript">
-
-   $('iframe').load( function() {
-       $('iframe').contents().find("head")
-         .append($("<style type='text/css'>  tbody{background-color:red;}  </style>"));
-   });
-
-</script>
 </html>
