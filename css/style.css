@@ -43,3 +43,52 @@ div#nav li#present a {background-color: #eee;}
 div#nav a {border-top: gray 1px solid; border-left: gray 1px solid; border-bottom: gray 1px solid;}
 
 div#footer {padding-top: 3em; clear: both;}
+
+.tab-widget {}
+
+.tab-widget__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tab-widget__item {
+    display: inline;
+    margin-right: 5px;
+}
+
+.tab-widget__link {
+    background-color: FireBrick;
+    border-radius: 5px 5px 0 0;
+    color: White;
+    font-weight: bold;
+    line-height: 2.1;
+    padding: .5em 1.5em;
+    text-decoration: none;
+}
+
+.tab-widget__link:focus,
+.tab-widget__link:hover {
+    color: White;
+}
+
+.tab-widget__link--active {
+    background-color: Crimson;
+    color: white;
+}
+
+.tab-widget__tabs {
+    background-color: WhiteSmoke;
+    border: solid Firebrick 1px;
+    border-radius: 0 5px 5px 5px;
+    padding: 1em;
+}
+
+.tab-widget__tab-content {
+    display: none;
+}
+
+.tab-widget__tab-content--active,
+.no-js .tab-widget__tab-content {
+    display: block;
+}
