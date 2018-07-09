@@ -1,5 +1,5 @@
 body {
-  background-color: #F8F8F8;  
+  background-color: #F8F8F8;
 }
 
 .tab-widget {
@@ -18,7 +18,7 @@ body {
 }
 
 .tab-widget__link {
-    background-color: FireBrick;
+    background-color: #264e5a;
     border-radius: 5px 5px 0 0;
     color: White;
     font-weight: bold;
@@ -30,19 +30,22 @@ body {
 .tab-widget__link:focus,
 .tab-widget__link:hover {
     color: White;
+    color: #59818D;
+
 }
 
 .tab-widget__link--active {
-    background-color: Crimson;
-    color: white;
+    background-color: #59818D;
+    background-color: white;
+    color: #59818D;
 }
 
 .tab-widget__tabs {
-    background-color: WhiteSmoke;
-    border: solid Firebrick 1px;
-    border-radius: 0 5px 5px 5px;
+    background-color: #ffffff;
+    border: solid WhiteSmoke 1px;
+    border-radius: 0 2px 2px 2px;
     padding: 1em;
-    max-width: 1024px;
+    max-width: 1424px;
 }
 
 .tab-widget__tab-content {
