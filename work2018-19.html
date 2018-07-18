@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>2018-2019</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="author" content="David McCallum" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+
+<link href="https://fonts.googleapis.com/css?family=Vollkorn:400,700" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+<script type="text/javascript">
+
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Week','Carribean Healers','Oregon Digital Upgrade','dsc.uoregon.edu OR press kit','High-density wrap-up','Work on cleaning up OJS identity OR other Digital Publishing'],
+      ['27',0,16,16,0,0],
+      ['28',0,32,8,0,0],
+      ['29',0,32,8,0,0],
+      ['30',0,0,8,32,0],
+      ['31',0,0,8,32,0],
+      ['32',0,16,8,16,0],
+      ['33',0,28,8,4,0],
+      ['34',0,40,0,0,0],
+      ['35',0,36,0,4,0],
+      ['36',0,40,0,0,0],
+      ['37',0,36,0,4,0],
+      ['38',0,32,0,0,0],
+      ['39',8,32,0,0,0],
+      ['40',8,32,0,0,0],
+      ['41',16,16,8,0,0],
+      ['42',32,2,6,0,0],
+      ['43',16,2,22,0,0],
+      ['44',0,0,0,0,0],
+      ['45',32,0,8,0,0],
+      ['46',32,0,8,0,0],
+      ['47',32,0,8,0,0],
+      ['48',24,16,0,0,0],
+      ['49',24,16,0,0,0],
+      ['50',32,0,8,0,0],
+      ['51',8,0,8,0,0],
+      ['52',32,0,8,0,0],
+      ['1',32,0,8,0,0],
+      ['2',32,0,8,0,0],
+      ['3',32,0,8,0,0],
+      ['4',0,0,0,0,0],
+      ['5',0,16,24,0,0],
+      ['6',24,16,0,0,0],
+      ['7',32,0,8,0,0],
+      ['8',32,0,8,0,0],
+      ['9',32,0,8,0,0],
+      ['10',32,0,8,0,0],
+      ['11',32,0,8,0,0],
+      ['12',16,0,24,0,0],
+      ['13',16,16,8,0,0],
+      ['14',16,16,8,0,0],
+      ['15',16,0,24,0,0],
+      ['16',16,0,24,0,0],
+      ['17',16,0,24,0,0],
+      ['18',0,0,0,0,40],
+      ['19',0,0,0,0,40],
+      ['20',0,0,0,0,40],
+      ['21',0,16,0,0,24],
+      ['22',0,16,0,0,24],
+      ['23',0,0,0,0,40],
+      ['24',0,0,0,0,40],
+      ['25',0,0,0,0,40],
+      ['26',0,0,0,0,40]
+    ]);
+
+    var colorlist = ['#62a70f','#f8dcaf','#D6C09C','#B8A485','#198078'];
+
+    var options = {
+      backgroundColor: '#F8F8F8',
+      legend: { position: 'right' },
+      connectSteps: false,
+      colors: colorlist,
+      fontName: 'Vollkorn',
+      title: 'Dave\'s 2018-19 Work, Speculatively',
+      hAxis: {title: 'Week Number'},
+      vAxis: {title: 'Weekly Hours'},
+      isStacked: true
+    };
+
+    var chart = new google.visualization.SteppedAreaChart(document.getElementById('chart_div'));
+
+    chart.draw(data, options);
+
+    colorlist.reverse();
+
+    google.charts.setOnLoadCallback(drawChart2);
+
+    function drawChart2() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['Work','Hours'],
+        ['OJS or Fembot',328],
+        ['High Density and Other',92],
+        ['dsc.uoregon.edu OR Press Kit',348],
+        ['OD Upgrade',520],
+        ['Carribean Healers',672]
+      ]);
+
+      //var options = {
+      //  title: 'My '
+      //};
+
+      var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+      chart.draw(data, options);
+    }
+
+  }
+
+/*
+   function isSiteOnline(url,callback) {
+       // try to load favicon
+       var timer = setTimeout(function(){
+           // timeout after 5 seconds
+           callback(false);
+       },5000)
+
+       var img = document.createElement("img");
+       img.onload = function() {
+           clearTimeout(timer);
+           callback(true);
+       }
+
+       img.onerror = function() {
+           clearTimeout(timer);
+           callback(false);
+       }
+
+       img.src = url+"/favicon.ico";
+   }
+
+   isSiteOnline("http://corazondedixie.org/",function(found){
+       if(found) {
+           // site is online
+           alert('Site responds');
+       }
+       else {
+           // site is offline (or favicon not found, or server is too slow)
+           alert('Site doesn\'t respond');
+
+       }
+   })
+
+*/
+
+   /*$('iframe').load( function() {
+       $('iframe').contents().find("head")
+         .append($("<style type='text/css'>  tbody{background-color:red;}  </style>"));
+   });*/
+
+</script>
+
+<body style="background-color: #F8F8F8;">
+  <div style="text-align:center;">
+    <div id="chart_div" style="width: 1024px; height: 500px;"></div>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+  </div>
+</body>
+</html>
